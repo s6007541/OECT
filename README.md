@@ -1,4 +1,4 @@
-# Optimized-Embedded Cluster & Tune : Optimized-Embedded Cluster & Tune: Boost Cold Start Performance in Text Classification
+# OECT : Optimized-Embedded Cluster & Tune: Boost Cold Start Performance in Text Classification
 
 ## Abstract
 
