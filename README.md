@@ -1,8 +1,12 @@
-# Intermediate Training Using Clustering
+# Optimized-Embedded Cluster & Tune : Optimized-Embedded Cluster & Tune: Boost Cold Start Performance in Text Classification
+
+## Abstract
+
+In the field of natural language processing, the challenge of insufficient labeled data in specific domains often impedes the effective fine-tuning of Large Language Models (LLMs) like BERT, a phenomenon known as the \textit{cold start problem}. Prior research on domain-adaption has shown that intertraining on domain-specific data between pre-training and fine-tuning stages can enhance model's performance. Cluster and Tune addresses the cold start problem by inter-training BERT using pseudo labels from clustering in the intermediate training phase. Our methodology further builds upon this unsupervised intermediate task by focusing on clustering techniques, loss function, and better feature representation. We rigorously tested our method on both topical and non-topical datasets. Our findings demonstrated a significant improvement in accuracy, particularly in scenarios with a limited number of labeled instances, showcasing the efficacy of our proposed methods in mitigating the cold start problem. 
 
 Code to reproduce the BERT intermediate training experiments from [Shnarch et al. (2022)](#reference). 
 
-Using this repository you can: 
+This repository you can:
 
 (1) Download the datasets used in the paper;
 
@@ -22,8 +26,6 @@ Using this repository you can:
 [Plotting the results](#plotting-the-results)
 
 [Reference](#reference)
-
-[License](#license)
 
 ## Installation
 The framework requires Python 3.8
@@ -90,7 +92,3 @@ Please cite:
     pages = "7639--7653",
 }
 ```
-
-## License
-This work is released under the Apache 2.0 license. The full text of the license can be found in [LICENSE](LICENSE).
-
