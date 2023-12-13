@@ -1,8 +1,6 @@
-*.sh
 *.txt
 *.csv
 *.tar.gz
 *.json
 *.h5
-datasets/
-*output_seed*
+datasets/*
