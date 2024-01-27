@@ -6,6 +6,10 @@
 ## Abstract
 In the field of natural language processing, the challenge of insufficient labeled data in specific domains often impedes the effective fine-tuning of Large Language Models (LLMs) like BERT, a phenomenon known as the \textit{cold start problem}. Prior research on domain-adaption has shown that intertraining on domain-specific data between pre-training and fine-tuning stages can enhance model's performance. Cluster and Tune addresses the cold start problem by inter-training BERT using pseudo labels from clustering in the intermediate training phase. Our methodology further builds upon this unsupervised intermediate task by focusing on clustering techniques, loss function, and better feature representation. We rigorously tested our method on both topical and non-topical datasets. Our findings demonstrated a significant improvement in accuracy, particularly in scenarios with a limited number of labeled instances, showcasing the efficacy of our proposed methods in mitigating the cold start problem. 
 
+<p align="center">
+<img src="image/OECT.png" height=350>
+</p>
+
 Code to reproduce the BERT intermediate training experiments from [Shnarch et al. (2022)](#reference). 
 
 This repository you can:
