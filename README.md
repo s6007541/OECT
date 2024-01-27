@@ -32,9 +32,9 @@ This repository you can:
 ## Installation
 The framework requires Python 3.8
 1. Clone the repository locally: 
-   `git clone https://github.com/IBM/intermediate-training-using-clustering`
+   `git clone https://github.com/s6007541/OECT.git`
 2. Go to the cloned directory 
-  `cd intermediate-training-using-clustering`
+  `cd OECT`
 4. Install the project dependencies: `pip install -r requirements.txt`
 
    Windows users may also need to download the latest [Microsoft Visual C++ Redistributable for Visual Studio](https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads) in order to support tensorflow
@@ -51,6 +51,14 @@ The experiment script `run_experiment.py` requires 6 arguments:
 - `random_seed`: used for sampling the train data and for model training
 - `inter_training_epochs`: number of epochs for the intermediate task. Defaults to 1 (as used in the paper)
 - `finetuning_epochs`: number of epochs for fine-tuning BERT over `labeling_budget` examples. Defaults to 10 (as used in the paper)
+- `clustering_algo`: option for alternative clustering algorithms : kmeans, affinity, meanshift, DBSCAN.
+- `run_baseline`: evaluate baseline (set to False if would like to avoid comutational cost).
+- `pipeline`: option for alternative intermidiate training : entropy and embedding. 
+- `cuda`: set gpu cuda device. 
+- `lr`: learning rate for intermidiate task. 
+- `batch_size`: batch size of intermidiate task.
+- `soft_label`: activate soft pseudo-labels in intermidate process.
+
 
 For example: 
 
@@ -64,33 +72,6 @@ Multiple experiments can safely write in parallel to the same `output/results.cs
 ## Plotting the results
 In order to show the effect of the intermediate task in different labeling budgets, run `python plot.py`. This script generates plots under `output/plots` for each dataset.
 
-For example:
-
-
-![Alt text](example_plot.png?raw=true "Output image of plot.py after running 5 seeds over 8 labeling budgets for dbpedia")
-
-
 ## Reference
 Eyal Shnarch, Ariel Gera, Alon Halfon, Lena Dankin, Leshem Choshen, Ranit Aharonov and Noam Slonim (2022). 
 [Cluster & Tune: Boost Cold Start Performance in Text Classification](https://aclanthology.org/2022.acl-long.526/). ACL 2022
-
-Please cite: 
-```
-@inproceedings{shnarch-etal-2022-cluster,
-    title = "Cluster & Tune: Boost Cold Start Performance in Text Classification",
-    author = "Shnarch, Eyal  and
-      Gera, Ariel  and
-      Halfon, Alon  and
-      Dankin, Lena  and
-      Choshen, Leshem  and
-      Aharonov, Ranit  and
-      Slonim, Noam",
-    booktitle = "Proceedings of the 60th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)",
-    month = may,
-    year = "2022",
-    address = "Dublin, Ireland",
-    publisher = "Association for Computational Linguistics",
-    url = "https://aclanthology.org/2022.acl-long.526",
-    pages = "7639--7653",
-}
-```
