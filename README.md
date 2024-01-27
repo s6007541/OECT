@@ -1,7 +1,7 @@
 # OECT : Optimized-Embedded Cluster & Tune: Boost Cold Start Performance in Text Classification
 * TensorFlow implementation of **Optimized-Embedded Cluster & Tune: Boost Cold Start Performance in Text Classification**.  
 [[`Slides`](https://docs.google.com/presentation/d/1henm9FYfTZ6WT7xVNS0hEfOfq098JUm7_sDsC70EDzM/edit?usp=sharing)]
-[[`Paper`](https://github.com/s6007541/OECT/blob/main/pdf_files/OECTL.pdf)] 
+[[`Paper`](https://github.com/s6007541/OECT/blob/main/pdf_files/OECT.pdf)] 
 
 ## Abstract
 In the field of natural language processing, the challenge of insufficient labeled data in specific domains often impedes the effective fine-tuning of Large Language Models (LLMs) like BERT, a phenomenon known as the \textit{cold start problem}. Prior research on domain-adaption has shown that intertraining on domain-specific data between pre-training and fine-tuning stages can enhance model's performance. Cluster and Tune addresses the cold start problem by inter-training BERT using pseudo labels from clustering in the intermediate training phase. Our methodology further builds upon this unsupervised intermediate task by focusing on clustering techniques, loss function, and better feature representation. We rigorously tested our method on both topical and non-topical datasets. Our findings demonstrated a significant improvement in accuracy, particularly in scenarios with a limited number of labeled instances, showcasing the efficacy of our proposed methods in mitigating the cold start problem. 
